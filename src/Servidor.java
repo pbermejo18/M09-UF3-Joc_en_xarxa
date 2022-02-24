@@ -72,7 +72,7 @@ public class Servidor {
             }
 
             // si en acabar el for la variable letigual és igual a la paraula pensada significa que el client l'ha endevinta.
-            // si no és la mateixa paraula em diu si algun caràcter coincideix
+            // si no és la mateixa paraula em diu si algun caràcter coincideix y si no son igual de llarges hem dona un missatge
             if (letigual.equals(ns.getParaula())) {
                 System.out.println("\033[0;32mEl client ha dit la mateixa paraula: " + ns.getParaula());
                 System.out.println("\033[0;97mPenso un altre paraula...");
