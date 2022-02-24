@@ -23,6 +23,7 @@ public class Client {
         byte [] receivedData = new byte[1024];
         byte [] sendingData;
 
+
         sendingData = getFirstRequest();
         while (mustContinue(sendingData)) {
             DatagramPacket packet = new DatagramPacket(sendingData,sendingData.length,serverIP,serverPort);
