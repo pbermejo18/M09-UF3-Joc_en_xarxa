@@ -8,6 +8,7 @@ public class Client {
     DatagramSocket socket;
     Scanner sc;
     String nom;
+    int intents = 5;
 
     public Client() {
         sc = new Scanner(System.in);
@@ -25,7 +26,8 @@ public class Client {
 
 
         sendingData = getFirstRequest();
-        while (mustContinue(sendingData)) {
+        while (mustContinue(sendingData) && intents > 0) {
+            intents --;
             DatagramPacket packet = new DatagramPacket(sendingData,sendingData.length,serverIP,serverPort);
             socket.send(packet);
             packet = new DatagramPacket(receivedData,1024);

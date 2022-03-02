@@ -29,7 +29,6 @@ public class Servidor {
 
         //el servidor atén el port indefinidament
         while (!acabat) {
-
             //creació del paquet per rebre les dades
             DatagramPacket packet = new DatagramPacket(receivingData, 5);
             //espera de les dades
