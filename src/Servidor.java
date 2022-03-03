@@ -53,7 +53,6 @@ public class Servidor {
 
         // comparació longitud de les paraules perquè no em doni errors
         if (ns.getParaula().length() == msg.length()) {
-
             String iguals = "";
             // string on guardo els caràcters que es repeteixen entre paraules
             String letigual = "";
